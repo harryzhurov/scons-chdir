@@ -19,9 +19,10 @@ def slon(target, source, env):
 #
 def launch_slon(env, src):
 
-    builddir = str(env.Dir('#'))
+    builddir = os.path.join( os.path.abspath( str(env.Dir('#')) ), 'build' )
+    src      = os.path.abspath( src )
     
-    trg = os.path.join(builddir, src + '.kot')
+    trg = os.path.join(builddir, os.path.basename(src) + '.kot')
     
     print('target:', trg, '   |   source:',src)
       
