@@ -13,7 +13,7 @@ help_info ="""
 ********************************************************************************     
     Available variants:
     ~~~~~~~~~~~~~~~~~~~
-        sw (default)
+        slon (default)
      
     Usage:
     ~~~~~  
@@ -31,7 +31,7 @@ Help(help_info)
 #
 #    Variant management
 #
-variant = ARGUMENTS.get('variant', 'sw')
+variant = ARGUMENTS.get('variant', 'slon')
 
 variant_name = variant.split(os.sep)[-1]
 

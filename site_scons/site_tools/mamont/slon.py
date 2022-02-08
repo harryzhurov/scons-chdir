@@ -9,7 +9,8 @@ from SCons.Script import *
 #
 def slon(target, source, env):
 
-    print(os.getcwd())
+    print('>>> Project root directory:   ', os.path.abspath(str(env.Dir('#'))))
+    print('>>> Current working directory:', os.getcwd())
 
     return None
 
